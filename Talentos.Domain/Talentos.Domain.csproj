@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2F25734-8BBF-45BD-BDD5-D495FF019AAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Talentos.Domain</RootNamespace>
+    <AssemblyName>Talentos.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Candidatos.cs" />
+    <Compile Include="Entities\ValueObjects\Server.cs" />
+    <Compile Include="Interfaces\Services\Developer\BackEndDeveloper.cs" />
+    <Compile Include="Interfaces\Services\Developer\MobileDeveloper.cs" />
+    <Compile Include="References\ModelosEmail.cs" />
+    <Compile Include="References\Tecnologias.cs" />
+    <Compile Include="Interfaces\Services\Developer\FrontEndDeveloper.cs" />
+    <Compile Include="Interfaces\Services\Developer\IDeveloper.cs" />
+    <Compile Include="Interfaces\Repository\ITecnologiaRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICandidatoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IHabilidadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Services\IEmailService.cs" />
+    <Compile Include="Interfaces\Services\ITecnologiaService.cs" />
+    <Compile Include="Interfaces\Services\ICandidatoService.cs" />
+    <Compile Include="Interfaces\Services\IHabilidadeService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Services\TecnologiaService.cs" />
+    <Compile Include="Services\CandidatoService.cs" />
+    <Compile Include="Services\HabilidadeService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Entities\ValueObjects\Email.cs" />
+    <Compile Include="Entities\Habilidade.cs" />
+    <Compile Include="Entities\ValueObjects\Tecnologia.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,21 @@
+﻿
+body {
+    background-image: url('Img/sky-bg.png');
+}
+
+.navbar-inverse {
+    background-color: #0192f6;
+    border-color: #0192f6;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: white;
+    }
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 2em;
+}
+
+
